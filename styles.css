@@ -241,11 +241,17 @@ footer{
     align-items: center;
     justify-content: center;
     column-gap: 7px;
+    text-decoration: none;
+    color: white;
 }
 
 .contact img{
     width: 18px;
     filter: invert(100%);
+}
+
+.contact div{
+    font-size: 17px;
 }
 
 /* Animations */

@@ -48,7 +48,6 @@
       </div>
     </nav>
     <main>
-
       <form method="get">
         <div id="data">
           <div class="part-form">
@@ -56,7 +55,7 @@
               <h3>Personal Data</h3>
             </div>
             <div class="input-container">
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label autofocus for="name">NAME</label>
                 <input
                   required
@@ -68,7 +67,7 @@
                 />
               </div>
 
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label for="email">EMAIL</label>
                 <input
                   required
@@ -76,10 +75,12 @@
                   id="email"
                   type="email"
                   name="email"
+                  onchange="validateEmail(this)"
                 />
+                <div id="emailvalidity" style="display: none;"></div>
               </div>
 
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label for="bdate">BIRTHDATE</label>
                 <input
                   required
@@ -91,7 +92,7 @@
               </div>
 
               <div class="side-inputs">
-                <div class="input-section">
+                <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                   <label for="age">AGE</label>
                   <input
                     required
@@ -140,7 +141,7 @@
                 </div>
               </div>
 
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label>NATIONALITY</label>
                 <input required name="nationality" list="nationality" />
                 <datalist id="nationality">
@@ -150,7 +151,7 @@
                 </datalist>
               </div>
 
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label>ADDRESS</label>
                 <textarea required name="address"></textarea>
               </div>
@@ -162,7 +163,7 @@
               <h3>Academic Data</h3>
             </div>
             <div class="input-container">
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label for="regno">REG NO</label>
                 <input
                   required
@@ -173,7 +174,7 @@
                 />
               </div>
 
-              <div class="input-section">
+              <div class="input-section" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
                 <label>COLLEGE</label>
                 <select required name="college">
                   <option>VIT, Vellore</option>
@@ -218,28 +219,32 @@
                       />
                       <label for="php">PHP</label>
                     </div>
-                    <div>
+                    <div style="display: flex; align-items: center;column-gap: 4px;">
                       <input
+                        onclick="showup('other-lang')"
                         type="checkbox"
                         id="others"
                         name="lang5"
-                        value="other"
-                        checked
+                        value="other"                        
                       />
-                      <label for="others">Other</label>
+                      <label for="others" id="otherlang-option">Other</label>
                       <input
+                        autofocus
+                        id="other-lang"
                         style="
                           width: 80px;
                           font-size: 15px;
                           padding: 3px 3px;
                           margin-left: 5px;
                           border-radius: 5px;
+                          display: none;
                         "
                         type="input"
                         id="other"
                         name="lang5"
                       />
                     </div>
+                    <div></div>
                   </div>
                 </fieldset>
               </div>
@@ -266,7 +271,7 @@
           />
         </div>
       </form>
-
     </main>
   </body>
+  <script src="js/functions.js"></script>
 </html>

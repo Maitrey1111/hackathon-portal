@@ -24,7 +24,7 @@
     </style>
   </head>
 
-  <body>
+  <body onload="popup()">
     <nav>
       <div>
         <a href="#landing">
@@ -127,36 +127,36 @@
       <div class="footer-title">Contact Us</div>
       <div class="footer-content">
         <div class="social-media">
-          <div class="contact">
+          <a onmouseover="expand(this)" onmouseout="normal(this)" href="#contact" class="contact">
             <img src="assets/contact/square-facebook-brands.svg" />
-            <a href="#">
+            <div>
               Facebook
-            </a>
-          </div>
-          <div class="contact">
+            </div>
+          </a>
+          <a onmouseover="expand(this)" onmouseout="normal(this)" href="#contact" class="contact">
             <img src="assets/contact/instagram-brands.svg" />
-            <a href="#">
+            <div>
               Instagram
-            </a>
-          </div>
-          <div class="contact">
+            </div>
+          </a>
+          <a onmouseover="expand(this)" onmouseout="normal(this)" href="#contact" class="contact">
             <img src="assets/contact/twitter-brands.svg" />
-            <a href="#">
+            <div>
               Twitter
-            </a>
-          </div>
-          <div class="contact">
+            </div>
+          </a>
+          <a onmouseover="expand(this)" onmouseout="normal(this)" href="mailto:hackathon@gmail.com" class="contact">
             <img src="assets/contact/envelope-solid.svg" />
-            <a href="mailto:hackathon@gmail.com">
+            <div>
               Mail
-            </a>
-          </div>
-          <div class="contact">
+            </div>
+          </a>
+          <a onmouseover="expand(this)" onmouseout="normal(this)" href="#contact" class="contact">
             <img src="assets/contact/phone-solid.svg" />
-            <a href="callto:123456789000">
+            <div>
               Phone
-            </a>
-          </div>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -166,4 +166,5 @@
     </footer>
 
   </body>
+  <script src="./js/functions.js"></script>
 </html>

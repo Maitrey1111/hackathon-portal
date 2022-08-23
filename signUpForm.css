@@ -12,6 +12,8 @@ body {
             rgba(0, 0, 0, 0.325)), url("assets/bg.jpg");
     background-position: top center;
     /* height: 5000px; */
+
+    
 }
 
 /* Scrollbar */
@@ -190,6 +192,7 @@ form{
     align-items: baseline;
     justify-content: space-around;
     row-gap: 3px;
+    transition: ease-in-out;
    
 }
 .input-section label{

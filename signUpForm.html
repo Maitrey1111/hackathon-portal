@@ -59,35 +59,54 @@
             <h3>SIGN UP</h3>
           </div>
           <div class="input-container">
-            <div class="input-section">
+            <div
+              class="input-section"
+              onmouseover="highlight(this)"
+              onmouseout="unhighlight(this)"
+            >
               <label for="regno">USERNAME</label>
               <input
+                autofocus
                 required
                 id="username"
                 name="username"
                 type="text"
                 pattern="^[1-9]{1}[0-9]{1}[A-Za-z]{3}([0-9999]{4})$"
-                placeholder="REG NO"
+                placeholder="Enter a username"
               />
             </div>
-            <div class="input-section">
+            <div
+              class="input-section"
+              onmouseover="highlight(this)"
+              onmouseout="unhighlight(this)"
+            >
               <label for="password">PASSWORD</label>
               <input
                 required
                 id="password"
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Enter password"
+                onkeyup="showlen(this)"
               />
+              <div id="passlentext" style="display: none;">
+                Password Length:<span id="passlen">0</span>
+              </div>
             </div>
-            <div class="input-section">
+            <div
+              class="input-section"
+              onmouseover="highlight(this)"
+              onmouseout="unhighlight(this)"
+            >
               <label for="confp">CONFIRM PASSWORD</label>
               <input
                 required
+                onchange="confirm()"
                 id="confp"
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Confirm password"
               />
+              <div id="passconf" style="display: none;"></div>
             </div>
           </div>
         </div>
@@ -113,4 +132,12 @@
       <div id="gradient"></div>
     </main>
   </body>
+  <script src="js/functions.js"></script>
 </html>
+
+<!-- 
+  https://www.javascripttutorial.net/javascript-dom/javascript-form/
+  ..add JS for others in skills
+  ..add JS for changing color of border of fields when not filled and clicked on submit
+  ..add arrow at right bottom corner to go up when we scroll down
+ -->

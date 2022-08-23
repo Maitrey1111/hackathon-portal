@@ -243,6 +243,8 @@ footer{
     align-items: center;
     justify-content: center;
     column-gap: 7px;
+    text-decoration: none;
+    color: white;
 }
 
 .contact img{
